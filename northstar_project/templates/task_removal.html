@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Task Removal
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Task Removal</h1>
+        <div>
+            <form action="/task_removal" method="post">
+                <select name="task">
+                    <option disable selected>Task</option>
+                    {% for task in user_tasks %}
+                        <option>{{ task["task"] }}</option>
+                    {% endfor %}
+                </select>
+                <button class="btn btn-primary" type="submit">Remove Task</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

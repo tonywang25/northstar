@@ -1,0 +1,38 @@
+body
+{
+    font-family: 'Poppins', sans-serif;
+}
+h1
+{
+    font-style: italic;
+    font-family: 'Lora', serif;
+}
+h2, h3
+{
+    font-family: 'Lora', serif;
+}
+nav .navbar-brand
+{
+    font-size: large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .brand
+{
+    font-style: italic;
+    font-family: 'Lora', serif;
+    color: #A4936A;
+}
+table
+{
+    text-align: center;
+    margin: 0 auto;
+}
+nav
+{
+    font-family: 'Poppins', sans-serif;
+}
+.container-fluid
+{
+    max-width: 1000px;
+}

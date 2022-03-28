@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Constellation
+{% endblock %}
+
+{% block main %}
+     <div class="container-fluid">
+        <!--Displays current user's northstar-->
+        <h1><span style="color: #A4936A">North Star</span>: {{ current_user[0]["northstar"] }}</h1>
+       <!--Uses rows and columns of Bootstrap grid to organize page-->
+        <div class="row mt-5">
+            <div class="col-sm">
+                <form action="/constellation" method="post">
+                    <h3>Create a Constellation Star</h3>
+                    <div class="mb-3">
+                        <input class="form-control mx-auto w-auto" id="c_star" name="c_star" placeholder="Constellation Star" type="text">
+                    </div>
+                     <div class="mb-3">
+                        <input class="form-control mx-auto w-auto" id="category" name="category" placeholder="Category Tag (1-2 words)" type="text">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Add Constellation Star</button>
+                </form>
+            </div>
+            <div class="col-sm">
+                <h3>Constellation</h3>
+                <table class="table table-hover">
+                    <!--List all the constellation stars (full sub-goals) for every category in the user's categories-->
+                    {% for category in user_categories %}
+                        <tr>
+                            <td>{{ category.c_star }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,13 @@
+North Star is a website that lets you set a North Star (your guiding purpose and goal), sub-goals (Constellation stars/Categories) that fall under the umbrella goal, and plan out your week/day with purpose. This website is intended for people who feel lost and disorganized in life.Upon entering the webpage, users will be prompted to register or log in and make a North Star goal.
+
+After entering in a sufficient username, password, password confirmation, and North Star, you are greeted by the setup page. This setup page prompts you to create the beginning of your Constellation: three Constellation goals. You will be prompted to create a "Category" for each of these goals so that it can be easily displayed and selected later on. The full sub-goals will be displayed in the "Constellation" page.
+
+After you have made your first three Constellation goals and their matching Categories, you will be directed to the main page/dashboard. Your North Star goal is displayed at the top of the page so that you can create tasks with your larger purpose in mind. Right underneath your North Star, you can type a goal you have in the box and select from the Categories you created. Once you press "Add Task", that task will be displayed underneath the category you assigned it to at the bottom of the page.
+
+Say you would like to add a Constellation that you did not think of during the sign up process. No worries! The Constellation page allows you to add new Constellation Stars (Category + Goal) and view all of your Constellation goals to the side. On the left, there is a form that resembles the setup form, where you add a constellation goal and a corresponding category. Then, you can see the constellation you just made, live on the right side of the page with your other constellations.
+
+Task view is just a page where you can view all of the tasks you have created, regardless of their Category assignment. This is useful because it allows you to see how your priorities in terms of Categories evolve over time. The columns Task, Category, and Creation Date are visible.
+
+Lastly, there are two small pages called Category Removal and Task Removal. These pages allow you to quickly add and remove categories and tasks. Once you remove a category, tasks under that category are also removed. When you are done removing, you can check the dashboard to see your updates.
+
+https://www.youtube.com/watch?v=z3mt7Nm_jZM

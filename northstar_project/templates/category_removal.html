@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Category Removal
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        <h1>Category Removal</h1>
+        <div>
+            <form action="/category_removal" method="post">
+                <select name="category">
+                    <!--Creates a select dropdown by iterating through all the categories in user_categories and using the category names-->
+                    <option disable selected>Category</option>
+                    {% for category in user_categories %}
+                        <option>{{ category["category_name"] }}</option>
+                    {% endfor %}
+                </select>
+                <button class="btn btn-primary" type="submit">Remove Category</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

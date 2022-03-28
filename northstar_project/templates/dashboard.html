@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block main %}
+    <div class="container-fluid">
+        Hi {{ current_user[0]["username"] }}!
+        <h1>Your <span style="color: #A4936A">North Star</span>: {{ current_user[0]["northstar"] }}</h1>
+    </div>
+    <div class="row mt-5">
+        <form action="/" method="post">
+            <h2>Enter a Task</h2>
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="task" name="task" placeholder="Task" type="text">
+            <select name="category">
+                <!--Creates a select dropdown by iterating through all the categories in user_categories and using the category names-->
+                <option disable selected>Category</option>
+                    {% for category in user_categories %}
+                        <option>{{ category["category_name"] }}</option>
+                    {% endfor %}
+            </select>
+            <button class="btn btn-primary" type="submit">Add Task</button>
+        </form>
+    </div>
+    <div class="row mt-5">
+        {% for category in user_categories %}
+            <h3>{{ category.category_name }}</h3>
+            <!--Creates a table that displays every task in each category as well as their creation dates-->
+            <table class="table table-hover">
+                {% for task in category.tasks %}
+                    <tr>
+                        <td>{{ task.task }}</td>
+                        <td>{{ task.date }}</td>
+                        <!--<td><form><button class="btn btn-primary" type="submit" name="{{ task.id }}">Delete</button></form></td>-->
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Task View
+{% endblock %}
+
+{% block main %}
+<h1>{{ current_user[0]["username"] }}'s Tasks</h1>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Task</th>
+                <th>Category</th>
+                <th>Creation Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for task in user_tasks %}
+            <tr>
+                <td>{{ task["task"] }}</td>
+                <td>{{ task["category_name"] }}</td>
+                <td>{{ task["date"] }}</td>
+                <!--<td><form action="/task_view" method="post"><button class="btn btn-primary" type="submit" name="{{ task.id }}">Delete</button></form></td>-->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

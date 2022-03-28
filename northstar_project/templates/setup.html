@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Setup
+{% endblock %}
+
+{% block main %}
+    <form action="/setup" method="post">
+        Now, break down your North Star into smaller subgoals. We call these "Constellation Goals." Write as many Constellation Goals as you like pertaining to social, financial, mental etc. aspects of your life.
+        What is a Constellation Goal you have that falls in line with your North Star?
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="c_star" name="c_star" placeholder="Constellation Star" type="text">
+        </div>
+        Summarize this goal into a category typed up in roughly one to two words. Goals you later add will be placed in any of these categories.
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="category" name="category" placeholder="Category (1-2 words)" type="text">
+        </div>
+        Now, add three more. Make sure each "category" is addressing a different aspect of your life.
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="c_star_2" name="c_star_2" placeholder="Second Constellation Star" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="category_2" name="category_2" placeholder="Category (1-2 words)" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="c_star_3" name="c_star_3" placeholder="Third Constellation Star" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="category_3" name="category_3" placeholder="Category (1-2 words)" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add Constellation Stars</button>
+    </form>
+{% endblock %}
